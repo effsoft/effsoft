@@ -1,0 +1,58 @@
+{
+  "name": "effsoft/effsoft",
+  "description": "",
+  "keywords": ["effsoft", "cms", "ecommerce"],
+  "homepage": "https://github.com/effsoft/effsoft",
+  "type": "effsoft",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/effsoft/effsoft/issues",
+    "wiki": "https://github.com/effsoft/effsoft/wiki",
+    "source": "https://github.com/effsoft/effsoft"
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.2.0",
+    "bower-asset/jquery": "~3.3.1",
+
+    "yiisoft/yii2": "~2.0.14",
+    "yiisoft/yii2-bootstrap": "~2.0.0",
+    "yiisoft/yii2-swiftmailer": "~2.0.0",
+
+    "yiisoft/yii2-mongodb": "~2.1.0",
+    "ogheo/yii2-htmlcompress": "~1.1.0",
+    "hashids/hashids": "~3.0.0",
+
+    "effsoft/eff": "dev-master",
+    "effsoft/eff-module-site": "dev-master"
+  },
+  "require-dev": {
+    "yiisoft/yii2-debug": "~2.0.0",
+    "yiisoft/yii2-gii": "~2.0.0",
+    "yiisoft/yii2-faker": "~2.0.0"
+  },
+  "config": {
+    "process-timeout": 1800,
+    "fxp-asset": {
+      "enabled": false
+    }
+  },
+  "repositories": {
+    "eff":{
+      "type": "path",
+      "url": "../eff"
+    },
+    "eff-module-site":{
+      "type": "path",
+      "url": "../eff-module-site"
+    },
+    "asset-packagist":{
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    },
+    "packagist":{
+      "type": "composer",
+      "url": "https://packagist.org"
+    }
+  }
+}
