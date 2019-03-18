@@ -16,7 +16,6 @@
     "bower-asset/jquery": "~3.3.1",
 
     "yiisoft/yii2": "~2.0.14",
-    "yiisoft/yii2-bootstrap": "~2.0.0",
     "yiisoft/yii2-swiftmailer": "~2.0.0",
 
     "yiisoft/yii2-mongodb": "~2.1.0",
@@ -24,12 +23,21 @@
     "hashids/hashids": "~3.0.0",
 
     "effsoft/eff": "dev-master",
-    "effsoft/eff-module-site": "dev-master"
+
+    "effsoft/eff-module-site": "dev-master",
+    "effsoft/eff-module-passport": "dev-master",
+
+    "effsoft/eff-theme-creative": "dev-master",
+    "effsoft/eff-theme-sb-admin-2": "dev-master",
+
+    "effsoft/eff-asset-jquery": "dev-master",
+    "effsoft/eff-asset-chart-js": "dev-master",
+    "effsoft/eff-asset-bootstrap-bundle": "dev-master",
+    "effsoft/eff-asset-jquery-easing": "dev-master",
+    "effsoft/eff-asset-magnific-popup": "dev-master"
   },
   "require-dev": {
-    "yiisoft/yii2-debug": "~2.0.0",
-    "yiisoft/yii2-gii": "~2.0.0",
-    "yiisoft/yii2-faker": "~2.0.0"
+    "yiisoft/yii2-debug": "~2.1.0"
   },
   "config": {
     "process-timeout": 1800,
@@ -38,9 +46,41 @@
     }
   },
   "repositories": {
+    "eff-asset-jquery":{
+      "type": "path",
+      "url": "../eff-asset-jquery"
+    },
+    "eff-asset-magnific-popup":{
+      "type": "path",
+      "url": "../eff-asset-magnific-popup"
+    },
+    "eff-asset-jquery-easing":{
+      "type": "path",
+      "url": "../eff-asset-jquery-easing"
+    },
+    "eff-asset-bootstrap-bundle":{
+      "type": "path",
+      "url": "../eff-asset-bootstrap-bundle"
+    },
+    "eff-asset-chart-js":{
+      "type": "path",
+      "url": "../eff-asset-chart-js"
+    },
     "eff":{
       "type": "path",
       "url": "../eff"
+    },
+    "eff-theme-creative":{
+      "type": "path",
+      "url": "../eff-theme-creative"
+    },
+    "eff-theme-sb-admin-2":{
+      "type": "path",
+      "url": "../eff-theme-sb-admin-2"
+    },
+    "eff-module-passport":{
+      "type": "path",
+      "url": "../eff-module-passport"
     },
     "eff-module-site":{
       "type": "path",

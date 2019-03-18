@@ -22,4 +22,5 @@ return [
     'messageConfig'=>[
         'charset'=>'UTF-8',
     ],
+    'viewPath' => '@app/views/mail',
 ];

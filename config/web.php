@@ -7,6 +7,7 @@ $params = require __DIR__ . '/params.php';
 
 $config = [
     'id' => 'effsoft',
+    'name' => 'Effsoft example site',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'aliases' => [
@@ -14,24 +15,22 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
 
-    'params' => $params,
-
-    'mongodb' => $mongodb,
-
-    'session' => $session,
-
     'defaultRoute' => 'site/home/index',
 
     'modules' => [
         'site' => [
-            'class' => 'app\modules\site\Module',
+            'class' => 'effsoft\eff\module\site\Module',
         ],
         'passport' => [
-            'class' => 'app\modules\passport\Module',
+            'class' => 'effsoft\eff\module\passport\Module',
         ],
     ],
 
     'components' => [
+
+        'mongodb' => $mongodb,
+
+        'session' => $session,
 
         'request' => [
             'cookieValidationKey' => 'lGvBfgn9v22ba27fr-F7riYWWoYC8A5t',
@@ -43,7 +42,7 @@ $config = [
         ],
 
         'user' => [
-            'identityClass' => 'app\modules\passport\models\User',
+            'identityClass' => 'effsoft\eff\module\passport\models\User',
             'enableAutoLogin' => true,
             'loginUrl' => array('passport/login'),
         ],
@@ -68,7 +67,7 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'enableStrictParsing' => true,
-            'suffix' => '',
+            'suffix' => '.html',
             'rules' => [
                 '/' => 'site/home/index',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
@@ -80,10 +79,10 @@ $config = [
             'class' => '\ogheo\htmlcompress\View',
             'compress' => YII_ENV_DEV ? false : true,
             'theme' => [
-                'basePath' => '@app/views/' . $params['theme'],
-                'baseUrl' => '@web/views/'  . $params['theme'],
+                'basePath' => '@app/themes/' . $params['theme'],
+                'baseUrl' => '@web/themes/'  . $params['theme'],
                 'pathMap' => [
-                    '@app/views' => '@app/views/'  . $params['theme'],
+                    '@app/views' => '@app/themes/'  . $params['theme'],
                 ],
             ],
         ],
@@ -95,17 +94,16 @@ $config = [
 
     ],
 
+    'params' => $params,
 ];
 
 if (YII_ENV_DEV) {
+    // configuration adjustments for 'dev' environment
     $config['bootstrap'][] = 'debug';
     $config['modules']['debug'] = [
         'class' => 'yii\debug\Module',
-    ];
-
-    $config['bootstrap'][] = 'gii';
-    $config['modules']['gii'] = [
-        'class' => 'yii\gii\Module',
+        // uncomment the following to add your IP if you are not connecting from localhost.
+        //'allowedIPs' => ['127.0.0.1', '::1'],
     ];
 }
 
