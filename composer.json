@@ -26,6 +26,7 @@
 
     "effsoft/eff-module-site": "dev-master",
     "effsoft/eff-module-passport": "dev-master",
+    "effsoft/eff-module-verify": "dev-master",
 
     "effsoft/eff-theme-creative": "dev-master",
     "effsoft/eff-theme-sb-admin-2": "dev-master",
@@ -77,6 +78,10 @@
     "eff-theme-sb-admin-2":{
       "type": "path",
       "url": "../eff-theme-sb-admin-2"
+    },
+    "eff-module-verify":{
+      "type": "path",
+      "url": "../eff-module-verify"
     },
     "eff-module-passport":{
       "type": "path",

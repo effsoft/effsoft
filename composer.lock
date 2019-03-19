@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "224eef8f62c5c9110b4f1440c6252be6",
+    "content-hash": "694e47cb6ea7472ddbc6caecac6696db",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -256,7 +256,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff",
-                "reference": "f1eb85c4e3e87c653b9b2ab875d6caa6f59e7077",
+                "reference": "f3774550519227fbbd50989cafc78ce8f2555ee8",
                 "shasum": null
             },
             "require": {
@@ -290,7 +290,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-asset-bootstrap-bundle",
-                "reference": "61937ba5de7af1f53ab6822dd1790b8760f467fc",
+                "reference": "e9bd558392d13191ad7f6e688eda35d9cea7c10b",
                 "shasum": null
             },
             "require": {
@@ -324,7 +324,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-asset-chart-js",
-                "reference": "5be0358b822ecfee564d53cf5ef3e5c0cca9a40a",
+                "reference": "719eca10145c9d39340daf2b8f42775d1bb1ae9f",
                 "shasum": null
             },
             "require": {
@@ -358,7 +358,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-asset-jquery",
-                "reference": "65e20a978488ef2c25c07d03f412b851e385ae2e",
+                "reference": "3e50dfb16bd27b4d49c35e71c61f572814e13699",
                 "shasum": null
             },
             "require": {
@@ -392,7 +392,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-asset-jquery-easing",
-                "reference": "1cb29a3920ea26b3b88a24038d916dc24263c367",
+                "reference": "05a926b4c65f8808fb9cee7b30b97da4f4af0dd6",
                 "shasum": null
             },
             "require": {
@@ -427,7 +427,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-asset-magnific-popup",
-                "reference": "167c4680e7ef9076a5eea72ba7673a133234eea9",
+                "reference": "7f430b5c30f61b93b13afea43ca59cc2d61b650e",
                 "shasum": null
             },
             "require": {
@@ -461,7 +461,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-module-passport",
-                "reference": "853c82b7d725cac465bd1c7e80be818a1408d8b7",
+                "reference": "ce05b0dd31b36b07d934ed40cb30e7c31f4b2c92",
                 "shasum": null
             },
             "require": {
@@ -471,6 +471,7 @@
                 "effsoft/eff-asset-jquery": "dev-master",
                 "effsoft/eff-asset-jquery-easing": "dev-master",
                 "effsoft/eff-asset-magnific-popup": "dev-master",
+                "effsoft/eff-module-verify": "dev-master",
                 "hashids/hashids": "~3.0.0",
                 "ircmaxell/random-lib": "~1.2.0",
                 "php": ">=7.2.0",
@@ -502,7 +503,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-module-site",
-                "reference": "faba6243a109d9b85dd9fd0b58204dd639163868",
+                "reference": "f7d0e9927ef4875222a48548947693da96d78682",
                 "shasum": null
             },
             "require": {
@@ -535,12 +536,48 @@
             ]
         },
         {
+            "name": "effsoft/eff-module-verify",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../eff-module-verify",
+                "reference": "6c1cc8a1178d94446107efeac45f1c9364d9a814",
+                "shasum": null
+            },
+            "require": {
+                "effsoft/eff": "dev-master",
+                "ircmaxell/random-lib": "~1.2.0",
+                "marc-mabe/php-enum": "v2.3.2",
+                "php": ">=7.2.0",
+                "yiisoft/yii2": "~2.0.14"
+            },
+            "type": "eff-module",
+            "autoload": {
+                "psr-4": {
+                    "effsoft\\eff\\module\\verify\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "effsoft\\eff\\module\\verify\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "homepage": "https://github.com/effsoft/eff-module-verify",
+            "keywords": [
+                "eff-module-verify",
+                "effsoft"
+            ]
+        },
+        {
             "name": "effsoft/eff-theme-creative",
             "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "../eff-theme-creative",
-                "reference": "61d2d190207fff17aa8b8fc0d910a8be06392d99",
+                "reference": "b12b441f134e4261a2dba24b19b920528fedb2ea",
                 "shasum": null
             },
             "require": {
@@ -575,7 +612,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-theme-sb-admin-2",
-                "reference": "7c22a3527881524a7cfd1beecf01d43ff4a1fc07",
+                "reference": "717f123cf3d722cce580aa0cec95930773da0420",
                 "shasum": null
             },
             "require": {
@@ -817,6 +854,69 @@
             "description": "A Base Security Library",
             "homepage": "https://github.com/ircmaxell/SecurityLib",
             "time": "2015-03-20T14:31:23+00:00"
+        },
+        {
+            "name": "marc-mabe/php-enum",
+            "version": "v2.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/marc-mabe/php-enum.git",
+                "reference": "b93dd64030cdd700d18ba681919a52054999b1fa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/marc-mabe/php-enum/zipball/b93dd64030cdd700d18ba681919a52054999b1fa",
+                "reference": "b93dd64030cdd700d18ba681919a52054999b1fa",
+                "shasum": ""
+            },
+            "require": {
+                "ext-reflection": "*",
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "php": "PHP>=5.4 will be required for using trait EnumSerializableTrait"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev",
+                    "dev-2.x": "2.3-dev",
+                    "dev-1.x": "1.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MabeEnum\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Bennewitz",
+                    "email": "dev@mabe.berlin",
+                    "homepage": "http://mabe.berlin/",
+                    "role": "Lead"
+                }
+            ],
+            "description": "Simple and fast implementation of enumerations with native PHP 5.3 and upper",
+            "homepage": "https://github.com/marc-mabe/php-enum",
+            "keywords": [
+                "enum",
+                "enum-map",
+                "enum-set",
+                "enumeration",
+                "enummap",
+                "enumset",
+                "type-hint",
+                "typehint"
+            ],
+            "time": "2019-03-16T18:21:30+00:00"
         },
         {
             "name": "ogheo/yii2-htmlcompress",
@@ -1286,6 +1386,7 @@
         "effsoft/eff": 20,
         "effsoft/eff-module-site": 20,
         "effsoft/eff-module-passport": 20,
+        "effsoft/eff-module-verify": 20,
         "effsoft/eff-theme-creative": 20,
         "effsoft/eff-theme-sb-admin-2": 20,
         "effsoft/eff-asset-jquery": 20,

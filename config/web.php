@@ -2,8 +2,9 @@
 
 $mongodb = require __DIR__ . '/mongodb.php';
 $session = require __DIR__ . '/session.php';
-$mailer = require __DIR__ . '/mailer.php';
+$mailer = require (YII_DEBUG ? dirname(dirname(__DIR__)) :__DIR__) . '/mailer.php';
 $params = require __DIR__ . '/params.php';
+$db = require __DIR__ . '/db.php';
 
 $config = [
     'id' => 'effsoft',
@@ -18,6 +19,9 @@ $config = [
     'defaultRoute' => 'site/home/index',
 
     'modules' => [
+        'verify' => [
+            'class' => 'effsoft\eff\module\verify\Module',
+        ],
         'site' => [
             'class' => 'effsoft\eff\module\site\Module',
         ],
@@ -32,6 +36,8 @@ $config = [
 
         'session' => $session,
 
+        'db' => $db,
+
         'request' => [
             'cookieValidationKey' => 'lGvBfgn9v22ba27fr-F7riYWWoYC8A5t',
             'enableCsrfValidation' => true,
@@ -42,7 +48,7 @@ $config = [
         ],
 
         'user' => [
-            'identityClass' => 'effsoft\eff\module\passport\models\User',
+            'identityClass' => 'effsoft\eff\module\passport\models\UserModel',
             'enableAutoLogin' => true,
             'loginUrl' => array('passport/login'),
         ],
