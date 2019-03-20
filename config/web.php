@@ -28,6 +28,9 @@ $config = [
         'passport' => [
             'class' => 'effsoft\eff\module\passport\Module',
         ],
+        'admin' => [
+            'class' => 'effsoft\eff\module\admin\Module',
+        ],
     ],
 
     'components' => [
@@ -78,6 +81,20 @@ $config = [
                 '/' => 'site/home/index',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
                 '<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
+            ],
+        ],
+
+        'i18n' => [
+            'translations' => [
+                'app*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    'sourceLanguage' => 'en-US',
+                    'fileMap' => [
+                        'app' => 'app.php',
+                        'app/error' => 'error.php',
+                    ],
+                ],
             ],
         ],
 

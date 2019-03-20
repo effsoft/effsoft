@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "694e47cb6ea7472ddbc6caecac6696db",
+    "content-hash": "86400e44c51e15f173e650344d981dac",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -40,6 +40,22 @@
             "license": [
                 "MIT"
             ]
+        },
+        {
+            "name": "bower-asset/fontawesome",
+            "version": "5.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FortAwesome/Font-Awesome.git",
+                "reference": "1cf1062e0cfda5e9b5b2cac7844721b345e1a9c5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/1cf1062e0cfda5e9b5b2cac7844721b345e1a9c5",
+                "reference": "1cf1062e0cfda5e9b5b2cac7844721b345e1a9c5",
+                "shasum": null
+            },
+            "type": "bower-asset"
         },
         {
             "name": "bower-asset/inputmask",
@@ -169,6 +185,25 @@
             "type": "bower-asset"
         },
         {
+            "name": "bower-asset/tinymce",
+            "version": "5.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tinymce/tinymce-dist.git",
+                "reference": "0d275010c122a955b14ff5ed5d9e4ebff058e677"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/0d275010c122a955b14ff5ed5d9e4ebff058e677",
+                "reference": "0d275010c122a955b14ff5ed5d9e4ebff058e677",
+                "shasum": null
+            },
+            "type": "bower-asset",
+            "license": [
+                "LGPL-2.1"
+            ]
+        },
+        {
             "name": "bower-asset/yii2-pjax",
             "version": "2.0.7.1",
             "source": {
@@ -256,7 +291,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff",
-                "reference": "f3774550519227fbbd50989cafc78ce8f2555ee8",
+                "reference": "d3431f674f3542e3efe5dbc9f055307604fd5a5b",
                 "shasum": null
             },
             "require": {
@@ -347,6 +382,40 @@
                 "MIT"
             ],
             "homepage": "https://github.com/effsoft/eff-asset-chart-js",
+            "keywords": [
+                "eff",
+                "effsoft"
+            ]
+        },
+        {
+            "name": "effsoft/eff-asset-fontawesome",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../eff-asset-fontawesome",
+                "reference": "c39b73a6b7851e7a6165cad2586b3bab46845b01",
+                "shasum": null
+            },
+            "require": {
+                "bower-asset/fontawesome": "~5.7.2",
+                "effsoft/eff": "dev-master",
+                "php": ">=7.2.0"
+            },
+            "type": "eff",
+            "autoload": {
+                "psr-4": {
+                    "effsoft\\eff\\asset\\fontawesome\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "effsoft\\eff\\asset\\fontawesome\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "homepage": "https://github.com/effsoft/eff-asset-fontawesome",
             "keywords": [
                 "eff",
                 "effsoft"
@@ -456,12 +525,91 @@
             ]
         },
         {
+            "name": "effsoft/eff-asset-tinymce",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../eff-asset-tinymce",
+                "reference": "51118d884aacd9ba5b9f024565e798a99ba34442",
+                "shasum": null
+            },
+            "require": {
+                "bower-asset/tinymce": "~5.0.3",
+                "effsoft/eff": "dev-master",
+                "php": ">=7.2.0"
+            },
+            "type": "eff",
+            "autoload": {
+                "psr-4": {
+                    "effsoft\\eff\\asset\\tinymce\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "effsoft\\eff\\asset\\tinymce\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "homepage": "https://github.com/effsoft/eff-asset-tinymce",
+            "keywords": [
+                "eff",
+                "effsoft"
+            ]
+        },
+        {
+            "name": "effsoft/eff-module-admin",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../eff-module-admin",
+                "reference": "2b05baf22b358e20b07c67800dfdb7ce6e0be162",
+                "shasum": null
+            },
+            "require": {
+                "effsoft/eff": "dev-master",
+                "effsoft/eff-asset-bootstrap-bundle": "dev-master",
+                "effsoft/eff-asset-chart-js": "dev-master",
+                "effsoft/eff-asset-fontawesome": "dev-master",
+                "effsoft/eff-asset-jquery": "dev-master",
+                "effsoft/eff-asset-jquery-easing": "dev-master",
+                "effsoft/eff-asset-magnific-popup": "dev-master",
+                "effsoft/eff-asset-tinymce": "dev-master",
+                "effsoft/eff-module-passport": "dev-master",
+                "effsoft/eff-module-verify": "dev-master",
+                "hashids/hashids": "~3.0.0",
+                "ircmaxell/random-lib": "~1.2.0",
+                "php": ">=7.2.0",
+                "yiisoft/yii2": "~2.0.14"
+            },
+            "type": "eff-module",
+            "autoload": {
+                "psr-4": {
+                    "effsoft\\eff\\module\\admin\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "effsoft\\eff\\module\\admin\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "homepage": "https://github.com/effsoft/eff-module-admin",
+            "keywords": [
+                "eff-module-admin",
+                "effsoft"
+            ]
+        },
+        {
             "name": "effsoft/eff-module-passport",
             "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "../eff-module-passport",
-                "reference": "ce05b0dd31b36b07d934ed40cb30e7c31f4b2c92",
+                "reference": "591ac61fd69e9632403058ebb76e4a4f056f52f1",
                 "shasum": null
             },
             "require": {
@@ -503,7 +651,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-module-site",
-                "reference": "f7d0e9927ef4875222a48548947693da96d78682",
+                "reference": "c956b7310271daba8670fc3622388009bccf39a8",
                 "shasum": null
             },
             "require": {
@@ -541,7 +689,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-module-verify",
-                "reference": "6c1cc8a1178d94446107efeac45f1c9364d9a814",
+                "reference": "e56610cdb5b51af174c20cb5b769b275924b9a26",
                 "shasum": null
             },
             "require": {
@@ -1387,13 +1535,16 @@
         "effsoft/eff-module-site": 20,
         "effsoft/eff-module-passport": 20,
         "effsoft/eff-module-verify": 20,
+        "effsoft/eff-module-admin": 20,
         "effsoft/eff-theme-creative": 20,
         "effsoft/eff-theme-sb-admin-2": 20,
         "effsoft/eff-asset-jquery": 20,
         "effsoft/eff-asset-chart-js": 20,
         "effsoft/eff-asset-bootstrap-bundle": 20,
         "effsoft/eff-asset-jquery-easing": 20,
-        "effsoft/eff-asset-magnific-popup": 20
+        "effsoft/eff-asset-magnific-popup": 20,
+        "effsoft/eff-asset-fontawesome": 20,
+        "effsoft/eff-asset-tinymce": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

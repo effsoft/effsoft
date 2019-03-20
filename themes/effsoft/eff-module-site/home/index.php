@@ -35,7 +35,7 @@ $this->title = Yii::t('eff-module-site/app','logo_text');
                         <a class="nav-link" href="<?=\yii\helpers\Url::to(['/passport/register']);?>">Sign Up</a>
                     </li>
                 <?php else: ?>
-                    <li class="nav-item">
+                <li class="nav-item">
                         <a class="nav-link" href="<?=\yii\helpers\Url::to(['/user/home']);?>">
                             <?=\Yii::$app->user->identity->username;?>
                         </a>

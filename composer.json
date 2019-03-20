@@ -27,6 +27,7 @@
     "effsoft/eff-module-site": "dev-master",
     "effsoft/eff-module-passport": "dev-master",
     "effsoft/eff-module-verify": "dev-master",
+    "effsoft/eff-module-admin": "dev-master",
 
     "effsoft/eff-theme-creative": "dev-master",
     "effsoft/eff-theme-sb-admin-2": "dev-master",
@@ -35,7 +36,9 @@
     "effsoft/eff-asset-chart-js": "dev-master",
     "effsoft/eff-asset-bootstrap-bundle": "dev-master",
     "effsoft/eff-asset-jquery-easing": "dev-master",
-    "effsoft/eff-asset-magnific-popup": "dev-master"
+    "effsoft/eff-asset-magnific-popup": "dev-master",
+    "effsoft/eff-asset-fontawesome": "dev-master",
+    "effsoft/eff-asset-tinymce": "dev-master"
   },
   "require-dev": {
     "yiisoft/yii2-debug": "~2.1.0"
@@ -47,6 +50,14 @@
     }
   },
   "repositories": {
+    "eff-asset-tinymce":{
+      "type": "path",
+      "url": "../eff-asset-tinymce"
+    },
+    "eff-asset-fontawesome":{
+      "type": "path",
+      "url": "../eff-asset-fontawesome"
+    },
     "eff-asset-jquery":{
       "type": "path",
       "url": "../eff-asset-jquery"
@@ -79,6 +90,10 @@
       "type": "path",
       "url": "../eff-theme-sb-admin-2"
     },
+    "eff-module-admin":{
+      "type": "path",
+      "url": "../eff-module-admin"
+    },
     "eff-module-verify":{
       "type": "path",
       "url": "../eff-module-verify"
@@ -90,6 +105,10 @@
     "eff-module-site":{
       "type": "path",
       "url": "../eff-module-site"
+    },
+    "packagist-image":{
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
     },
     "asset-packagist":{
       "type": "composer",
