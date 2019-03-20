@@ -1,5 +1,5 @@
 <?php
-$this->context->layout = '@app/themes/effsoft/layouts/front.layout.php';
+$this->context->layout = 'site.layout.php';
 $creativeBundle = \effsoft\eff\theme\creative\BootstrapCreativeAssetBundle::register($this);
 ?>
 <?php
@@ -35,6 +35,14 @@ $this->title = Yii::t('eff-module-site/app','logo_text');
                         <a class="nav-link" href="<?=\yii\helpers\Url::to(['/passport/register']);?>">Sign Up</a>
                     </li>
                 <?php else: ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?=\yii\helpers\Url::to(['/user/home']);?>">
+                            <?=\Yii::$app->user->identity->username;?>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?=\yii\helpers\Url::to(['/admin/dashboard']);?>">Dashboard</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?=\yii\helpers\Url::to(['/passport/logout']);?>">Sign Out</a>
                     </li>
