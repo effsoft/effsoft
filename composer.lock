@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "86400e44c51e15f173e650344d981dac",
+    "content-hash": "883c9bccffd25e1f182b198bb3ea1f50",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -35,6 +35,28 @@
                 "url": "https://api.github.com/repos/chartjs/Chart.js/zipball/924a66bae23f7e938531024951f7251d46785473",
                 "reference": "924a66bae23f7e938531024951f7251d46785473",
                 "shasum": null
+            },
+            "type": "bower-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "bower-asset/datatables",
+            "version": "1.10.19",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:DataTables/DataTables.git",
+                "reference": "156faa83386460c578e00c460eca9766e38a0c5f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DataTables/DataTables/zipball/156faa83386460c578e00c460eca9766e38a0c5f",
+                "reference": "156faa83386460c578e00c460eca9766e38a0c5f",
+                "shasum": null
+            },
+            "require": {
+                "bower-asset/jquery": ">=1.7.0"
             },
             "type": "bower-asset",
             "license": [
@@ -291,7 +313,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff",
-                "reference": "d3431f674f3542e3efe5dbc9f055307604fd5a5b",
+                "reference": "6739321412b233b83be45d4a245870ca951f3c98",
                 "shasum": null
             },
             "require": {
@@ -382,6 +404,40 @@
                 "MIT"
             ],
             "homepage": "https://github.com/effsoft/eff-asset-chart-js",
+            "keywords": [
+                "eff",
+                "effsoft"
+            ]
+        },
+        {
+            "name": "effsoft/eff-asset-datatables",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../eff-asset-datatables",
+                "reference": "878939f9b6f45375ee2204931c3fad56342eeaf1",
+                "shasum": null
+            },
+            "require": {
+                "bower-asset/datatables": "~1.10.19",
+                "effsoft/eff": "dev-master",
+                "php": ">=7.2.0"
+            },
+            "type": "eff",
+            "autoload": {
+                "psr-4": {
+                    "effsoft\\eff\\asset\\datatables\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "effsoft\\eff\\asset\\datatables\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "homepage": "https://github.com/effsoft/eff-asset-datatables",
             "keywords": [
                 "eff",
                 "effsoft"
@@ -564,7 +620,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-module-admin",
-                "reference": "2b05baf22b358e20b07c67800dfdb7ce6e0be162",
+                "reference": "77bad99293163823c8c1d320e723e1b74746f443",
                 "shasum": null
             },
             "require": {
@@ -609,7 +665,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-module-passport",
-                "reference": "591ac61fd69e9632403058ebb76e4a4f056f52f1",
+                "reference": "64a3831882d31510e4cd444634c52c8fe98dc17b",
                 "shasum": null
             },
             "require": {
@@ -651,7 +707,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-module-site",
-                "reference": "c956b7310271daba8670fc3622388009bccf39a8",
+                "reference": "b8450557d9d4eb93af61209efbcc1134677948b1",
                 "shasum": null
             },
             "require": {
@@ -680,6 +736,49 @@
             "homepage": "https://github.com/effsoft/eff-module-site",
             "keywords": [
                 "eff-module-site",
+                "effsoft"
+            ]
+        },
+        {
+            "name": "effsoft/eff-module-user",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../eff-module-user",
+                "reference": "0e502d6c7e1c42d7544950f1cbe025f12042acd0",
+                "shasum": null
+            },
+            "require": {
+                "effsoft/eff": "dev-master",
+                "effsoft/eff-asset-bootstrap-bundle": "dev-master",
+                "effsoft/eff-asset-chart-js": "dev-master",
+                "effsoft/eff-asset-fontawesome": "dev-master",
+                "effsoft/eff-asset-jquery": "dev-master",
+                "effsoft/eff-asset-jquery-easing": "dev-master",
+                "effsoft/eff-asset-magnific-popup": "dev-master",
+                "effsoft/eff-asset-tinymce": "dev-master",
+                "hashids/hashids": "~3.0.0",
+                "ircmaxell/random-lib": "~1.2.0",
+                "php": ">=7.2.0",
+                "yiisoft/yii2": "~2.0.14"
+            },
+            "type": "eff-module",
+            "autoload": {
+                "psr-4": {
+                    "effsoft\\eff\\module\\user\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "effsoft\\eff\\module\\user\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "homepage": "https://github.com/effsoft/eff-module-user",
+            "keywords": [
+                "eff-module-user",
                 "effsoft"
             ]
         },
@@ -760,7 +859,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-theme-sb-admin-2",
-                "reference": "717f123cf3d722cce580aa0cec95930773da0420",
+                "reference": "cceba447fc3edb285f884b1da2bfcc7aec9f0128",
                 "shasum": null
             },
             "require": {
@@ -1536,6 +1635,7 @@
         "effsoft/eff-module-passport": 20,
         "effsoft/eff-module-verify": 20,
         "effsoft/eff-module-admin": 20,
+        "effsoft/eff-module-user": 20,
         "effsoft/eff-theme-creative": 20,
         "effsoft/eff-theme-sb-admin-2": 20,
         "effsoft/eff-asset-jquery": 20,
@@ -1544,7 +1644,8 @@
         "effsoft/eff-asset-jquery-easing": 20,
         "effsoft/eff-asset-magnific-popup": 20,
         "effsoft/eff-asset-fontawesome": 20,
-        "effsoft/eff-asset-tinymce": 20
+        "effsoft/eff-asset-tinymce": 20,
+        "effsoft/eff-asset-datatables": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

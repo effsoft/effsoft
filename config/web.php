@@ -19,6 +19,9 @@ $config = [
     'defaultRoute' => 'site/home/index',
 
     'modules' => [
+        'user' => [
+            'class' => 'effsoft\eff\module\user\Module',
+        ],
         'verify' => [
             'class' => 'effsoft\eff\module\verify\Module',
         ],
@@ -81,6 +84,7 @@ $config = [
                 '/' => 'site/home/index',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
                 '<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
+                '<module:\w+>/<sub_module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<sub_module>/<controller>/<action>',
             ],
         ],
 
@@ -99,7 +103,7 @@ $config = [
         ],
 
         'view' => [
-            'class' => '\ogheo\htmlcompress\View',
+            'class' => '\effsoft\eff\EffView',
             'compress' => YII_ENV_DEV ? false : true,
             'theme' => [
                 'basePath' => '@app/themes/' . $params['theme'],

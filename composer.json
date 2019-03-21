@@ -21,6 +21,7 @@
     "yiisoft/yii2-mongodb": "~2.1.0",
     "ogheo/yii2-htmlcompress": "~1.1.0",
     "hashids/hashids": "~3.0.0",
+    "2amigos/yii2-file-upload-widget": "~1.0.9",
 
     "effsoft/eff": "dev-master",
 
@@ -28,6 +29,7 @@
     "effsoft/eff-module-passport": "dev-master",
     "effsoft/eff-module-verify": "dev-master",
     "effsoft/eff-module-admin": "dev-master",
+    "effsoft/eff-module-user": "dev-master",
 
     "effsoft/eff-theme-creative": "dev-master",
     "effsoft/eff-theme-sb-admin-2": "dev-master",
@@ -38,7 +40,8 @@
     "effsoft/eff-asset-jquery-easing": "dev-master",
     "effsoft/eff-asset-magnific-popup": "dev-master",
     "effsoft/eff-asset-fontawesome": "dev-master",
-    "effsoft/eff-asset-tinymce": "dev-master"
+    "effsoft/eff-asset-tinymce": "dev-master",
+    "effsoft/eff-asset-datatables": "dev-master"
   },
   "require-dev": {
     "yiisoft/yii2-debug": "~2.1.0"
@@ -50,6 +53,10 @@
     }
   },
   "repositories": {
+    "eff-asset-datatables":{
+      "type": "path",
+      "url": "../eff-asset-datatables"
+    },
     "eff-asset-tinymce":{
       "type": "path",
       "url": "../eff-asset-tinymce"
@@ -90,6 +97,11 @@
       "type": "path",
       "url": "../eff-theme-sb-admin-2"
     },
+
+    "eff-module-user":{
+      "type": "path",
+      "url": "../eff-module-user"
+    },
     "eff-module-admin":{
       "type": "path",
       "url": "../eff-module-admin"
@@ -106,10 +118,8 @@
       "type": "path",
       "url": "../eff-module-site"
     },
-    "packagist-image":{
-      "type": "composer",
-      "url": "https://packagist.phpcomposer.com"
-    },
+
+    
     "asset-packagist":{
       "type": "composer",
       "url": "https://asset-packagist.org"
