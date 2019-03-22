@@ -21,7 +21,6 @@
     "yiisoft/yii2-mongodb": "~2.1.0",
     "ogheo/yii2-htmlcompress": "~1.1.0",
     "hashids/hashids": "~3.0.0",
-    "2amigos/yii2-file-upload-widget": "~1.0.9",
 
     "effsoft/eff": "dev-master",
 
@@ -30,6 +29,8 @@
     "effsoft/eff-module-verify": "dev-master",
     "effsoft/eff-module-admin": "dev-master",
     "effsoft/eff-module-user": "dev-master",
+    "effsoft/eff-module-role": "dev-master",
+    "effsoft/eff-module-content": "dev-master",
 
     "effsoft/eff-theme-creative": "dev-master",
     "effsoft/eff-theme-sb-admin-2": "dev-master",
@@ -98,6 +99,14 @@
       "url": "../eff-theme-sb-admin-2"
     },
 
+    "eff-module-content":{
+      "type": "path",
+      "url": "../eff-module-content"
+    },
+    "eff-module-role":{
+      "type": "path",
+      "url": "../eff-module-role"
+    },
     "eff-module-user":{
       "type": "path",
       "url": "../eff-module-user"

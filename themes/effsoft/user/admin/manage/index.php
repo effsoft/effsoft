@@ -9,7 +9,6 @@ $this->title = \Yii::t('app', 'User Management');
 <h1 class="h3 mb-2 text-gray-800"><?= \Yii::t('app', 'User'); ?></h1>
 <p class="mb-4"><?= \Yii::t('app', 'User Management'); ?></p>
 
-<!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary"><?= \Yii::t('app', 'Users'); ?></h6>
@@ -38,35 +37,39 @@ $this->title = \Yii::t('app', 'User Management');
                             <?= $user->last_name ?>
                         </td>
                         <td>
-                            <a href="<?=\yii\helpers\Url::to(['/user/'.UserService::encodeId($user->_id)], true)?>" target="_blank">
-                            <?= $user->username ?>
+                            <a href="<?= \yii\helpers\Url::to(['/user/' . UserService::encodeId($user->_id)], true) ?>" target="_blank">
+                                <?= $user->username ?>
                             </a>
                         </td>
                         <td>
                             <?= $user->email ?>
                         </td>
                         <td>
-                            <?= date('m/d/Y',$user->date_created) ?>
+                            <?= date('m/d/Y', $user->date_created) ?>
                         </td>
                         <td>
                             <?php if ($user->activated) : ?>
-                            <a href="#" class="btn btn-sm btn-success btn-circle" onclick="return false;">
+                            <a href="#" class="btn btn-sm btn-success btn-circle" onclick="return false;" title="已激活">
                                 <i class="fas fa-fw fa-check"></i>
                             </a>
                             <?php else : ?>
-                            <a href="#" class="btn btn-sm btn-danger btn-circle" onclick="return false;">
+                            <a href="#" class="btn btn-sm btn-danger btn-circle" onclick="return false;" title="未激活">
                                 <i class="fas fa-fw fa-exclamation-triangle"></i>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-warning btn-circle" onclick="return false;" title="发送激活邮件">
+                                <i class="fas fa-fw fa-envelope"></i>
                             </a>
                             <?php endif; ?>
                         </td>
                         <td>
                             <?php if (!$user->blocked) : ?>
-                            <a href="#" class="btn btn-sm btn-success btn-circle" onclick="return false;">
+                            <a href="#" class="btn btn-sm btn-success btn-circle" onclick="return false;" title="正常">
                                 <i class="fas fa-fw fa-check"></i>
                             </a>
+
                             <?php else : ?>
-                            <a href="#" class="btn btn-sm btn-danger btn-circle" onclick="return false;">
-                                <i class="fas fa-fw fa-exclamation-triangle"></i>
+                            <a href="#" class="btn btn-sm btn-danger btn-circle" onclick="return false;" title="被封禁">
+                                <i class="fas fa-fw fa-minus-circle"></i>
                             </a>
                             <?php endif; ?>
                         </td>
@@ -92,3 +95,12 @@ $this->title = \Yii::t('app', 'User Management');
     'nextPageCssClass' => 'paginate_button page-item',
     'nextPageLabel' => '下一页',
 ]); ?> 
+
+<?php 
+$this->registerJs( <<< EOT_JS_CODE
+
+  // JS code here
+
+EOT_JS_CODE
+);
+?>

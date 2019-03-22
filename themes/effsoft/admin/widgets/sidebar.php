@@ -9,7 +9,7 @@
     <div class="sidebar-brand-icon rotate-n-15">
       <i class="fas fa-laugh-wink"></i>
     </div>
-    <div class="sidebar-brand-text mx-3"><?= Yii::t('app', 'EFF SOFT');?></div>
+    <div class="sidebar-brand-text mx-3"><?= Yii::t('app', 'EFF SOFT');?> <sup>0.1</sup></div>
   </a>
 
   <!-- Divider -->

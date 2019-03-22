@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "883c9bccffd25e1f182b198bb3ea1f50",
+    "content-hash": "2ef1ab1eb39191194afa3e9ccb121294",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -313,7 +313,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff",
-                "reference": "6739321412b233b83be45d4a245870ca951f3c98",
+                "reference": "83b8f60241ab37101fd77119cd611164781b2419",
                 "shasum": null
             },
             "require": {
@@ -660,12 +660,55 @@
             ]
         },
         {
+            "name": "effsoft/eff-module-content",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../eff-module-content",
+                "reference": "279cd2252afb3b91fa2a8e4944dbd1b624f1c422",
+                "shasum": null
+            },
+            "require": {
+                "effsoft/eff": "dev-master",
+                "effsoft/eff-asset-bootstrap-bundle": "dev-master",
+                "effsoft/eff-asset-chart-js": "dev-master",
+                "effsoft/eff-asset-fontawesome": "dev-master",
+                "effsoft/eff-asset-jquery": "dev-master",
+                "effsoft/eff-asset-jquery-easing": "dev-master",
+                "effsoft/eff-asset-magnific-popup": "dev-master",
+                "effsoft/eff-asset-tinymce": "dev-master",
+                "hashids/hashids": "~3.0.0",
+                "ircmaxell/random-lib": "~1.2.0",
+                "php": ">=7.2.0",
+                "yiisoft/yii2": "~2.0.14"
+            },
+            "type": "eff-module",
+            "autoload": {
+                "psr-4": {
+                    "effsoft\\eff\\module\\content\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "effsoft\\eff\\module\\content\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "homepage": "https://github.com/effsoft/eff-module-content",
+            "keywords": [
+                "eff-module-content",
+                "effsoft"
+            ]
+        },
+        {
             "name": "effsoft/eff-module-passport",
             "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "../eff-module-passport",
-                "reference": "64a3831882d31510e4cd444634c52c8fe98dc17b",
+                "reference": "7b0845a69f0a74ba855b5ee53356db0a2786bc83",
                 "shasum": null
             },
             "require": {
@@ -702,12 +745,55 @@
             ]
         },
         {
+            "name": "effsoft/eff-module-role",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../eff-module-role",
+                "reference": "7dd12e06c1b3b708be78e356f8910b427261db0e",
+                "shasum": null
+            },
+            "require": {
+                "effsoft/eff": "dev-master",
+                "effsoft/eff-asset-bootstrap-bundle": "dev-master",
+                "effsoft/eff-asset-chart-js": "dev-master",
+                "effsoft/eff-asset-fontawesome": "dev-master",
+                "effsoft/eff-asset-jquery": "dev-master",
+                "effsoft/eff-asset-jquery-easing": "dev-master",
+                "effsoft/eff-asset-magnific-popup": "dev-master",
+                "effsoft/eff-asset-tinymce": "dev-master",
+                "hashids/hashids": "~3.0.0",
+                "ircmaxell/random-lib": "~1.2.0",
+                "php": ">=7.2.0",
+                "yiisoft/yii2": "~2.0.14"
+            },
+            "type": "eff-module",
+            "autoload": {
+                "psr-4": {
+                    "effsoft\\eff\\module\\role\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "effsoft\\eff\\module\\role\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "homepage": "https://github.com/effsoft/eff-module-role",
+            "keywords": [
+                "eff-module-role",
+                "effsoft"
+            ]
+        },
+        {
             "name": "effsoft/eff-module-site",
             "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "../eff-module-site",
-                "reference": "b8450557d9d4eb93af61209efbcc1134677948b1",
+                "reference": "cfc5a6a32d07c60ccd1d375c5a659784c3533d65",
                 "shasum": null
             },
             "require": {
@@ -745,7 +831,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-module-user",
-                "reference": "0e502d6c7e1c42d7544950f1cbe025f12042acd0",
+                "reference": "a6c5b598c5c09b26dd623100e97bd163e6752da3",
                 "shasum": null
             },
             "require": {
@@ -1636,6 +1722,8 @@
         "effsoft/eff-module-verify": 20,
         "effsoft/eff-module-admin": 20,
         "effsoft/eff-module-user": 20,
+        "effsoft/eff-module-role": 20,
+        "effsoft/eff-module-content": 20,
         "effsoft/eff-theme-creative": 20,
         "effsoft/eff-theme-sb-admin-2": 20,
         "effsoft/eff-asset-jquery": 20,

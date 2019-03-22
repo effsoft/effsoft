@@ -19,6 +19,12 @@ $config = [
     'defaultRoute' => 'site/home/index',
 
     'modules' => [
+        'content' => [
+            'class' => 'effsoft\eff\module\content\Module',
+        ],
+        'role' => [
+            'class' => 'effsoft\eff\module\role\Module',
+        ],
         'user' => [
             'class' => 'effsoft\eff\module\user\Module',
         ],
@@ -43,6 +49,8 @@ $config = [
         'session' => $session,
 
         'db' => $db,
+
+        'authManager' => 'yii\mongodb\rbac\MongoDbManager',
 
         'request' => [
             'cookieValidationKey' => 'lGvBfgn9v22ba27fr-F7riYWWoYC8A5t',
