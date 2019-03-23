@@ -24,25 +24,70 @@ $this->title = \Yii::t('app', 'Category Management');
                     ->all();
                 ?>
                 <?php foreach ($categories as $category) : ?>
-                    <div class="row mb-2 p-2 border-bottom" id="<?= $category->_id ?>">
-                        <div class="col align-left">
-                            <?= $category->name ?>
+                    <?php if (empty($category->parent_id)): ?>
+                        <div class="row mb-2 p-2 border-bottom category_row" id="<?= $category->_id ?>">
+                            <div class="col align-left">
+                                <?= $category->name ?>
+                                <?php foreach ($categories as $c): ?>
+                                    <?php if (strval($c['parent_id']) == strval($category->_id)): ?>
+                                        <div class="row category_row p-2">
+                                            <div class="col">
+                                                -- <?= $c->name ?>
+                                            </div>
+                                            <div class="col">
+                                                <a href="<?= \yii\helpers\Url::to(['/content/admin/category/edit', 'id' => \effsoft\eff\helpers\Ids::encodeId($c->_id)]) ?>"
+                                                   class=""
+                                                   title="编辑">
+                                                    <i class="fa fa-fw fa-edit"></i>
+                                                </a>
+                                                <a href="<?= \yii\helpers\Url::to(['/content/admin/category/delete', 'id' => \effsoft\eff\helpers\Ids::encodeId($c->_id)]) ?>"
+                                                   class=""
+                                                   title="删除">
+                                                    <i class="fa fa-fw fa-minus"></i>
+                                                </a>
+                                                <a href="#" class="swap_up"
+                                                   data-id="<?= $c->_id ?>"
+                                                   data-order="<?= $c->order ?>"
+                                                   title="上移">
+                                                    <i class="fas fa-fw fa-arrow-up"></i>
+                                                </a>
+                                                <a href="#" class="swap_down"
+                                                   data-id="<?= $c->_id ?>"
+                                                   data-order="<?= $c->order ?>"
+                                                   title="下移">
+                                                    <i class="fas fa-fw fa-arrow-down"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+                            </div>
+                            <div class="col">
+                                <a href="<?= \yii\helpers\Url::to(['/content/admin/category/edit', 'id' => \effsoft\eff\helpers\Ids::encodeId($category->_id)]) ?>"
+                                   class="btn btn-sm btn-primary btn-circle"
+                                   title="编辑">
+                                    <i class="fas fa-fw fa-edit"></i>
+                                </a>
+                                <a href="<?= \yii\helpers\Url::to(['/content/admin/category/delete', 'id' => \effsoft\eff\helpers\Ids::encodeId($category->_id)]) ?>"
+                                   class="btn btn-sm btn-danger btn-circle"
+                                   title="删除">
+                                    <i class="fas fa-fw fa-minus"></i>
+                                </a>
+                                <a href="#" class="btn btn-sm btn-secondary btn-circle swap_up"
+                                   data-id="<?= $category->_id ?>"
+                                   data-order="<?= $category->order ?>"
+                                   title="上移">
+                                    <i class="fas fa-fw fa-arrow-up"></i>
+                                </a>
+                                <a href="#" class="btn btn-sm btn-secondary btn-circle swap_down"
+                                   data-id="<?= $category->_id ?>"
+                                   data-order="<?= $category->order ?>"
+                                   title="下移">
+                                    <i class="fas fa-fw fa-arrow-down"></i>
+                                </a>
+                            </div>
                         </div>
-                        <div class="col">
-                            <a href="#" class="btn btn-sm btn-success btn-circle swap_up"
-                               data-id="<?=$category->_id?>"
-                               data-order="<?=$category->order?>"
-                               <?php if (reset($categories) == $category): ?>style="display:none;"<?php endif; ?>
-                               title="上移">
-                                <i class="fas fa-fw fa-arrow-up"></i>
-                            </a>
-                            <a href="#" class="btn btn-sm btn-success btn-circle swap_down"
-                               <?php if (end($categories) == $category): ?>style="display:none;"<?php endif; ?>
-                               title="下移">
-                                <i class="fas fa-fw fa-arrow-down"></i>
-                            </a>
-                        </div>
-                    </div>
+                    <?php endif; ?>
                 <?php endforeach; ?>
             </div>
         </div>
@@ -66,6 +111,7 @@ $this->title = \Yii::t('app', 'Category Management');
 
 <?php
 $this->registerJs(<<< EOT_JS_CODE
+
 
   $('.swap_up').click(function(){
     var ele = $(this);
@@ -105,16 +151,22 @@ $this->registerJs(<<< EOT_JS_CODE
   
   var check_swap_position = function(e){
     if(e.is(':first-child')){
-        e.find('.swap_up').hide();
+        e.children().last().find('.swap_up').hide();
     }else{
-        e.find('.swap_up').show();
+        e.children().last().find('.swap_up').show();
     }
     if(e.is(':last-child')){
-        e.find('.swap_down').hide();
+        e.children().last().find('.swap_down').hide();
     }else{
-        e.find('.swap_down').show();
+        e.children().last().find('.swap_down').show();
     }
   };
+  
+  $(function(){
+        $.each($('.category_row'),function(index,value){
+            check_swap_position($(value));
+        });
+    });
 
 EOT_JS_CODE
 );

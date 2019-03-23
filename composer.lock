@@ -313,13 +313,14 @@
             "dist": {
                 "type": "path",
                 "url": "../eff",
-                "reference": "83b8f60241ab37101fd77119cd611164781b2419",
+                "reference": "1503a14242d11a7cdb2c6cded34f42c224d8649d",
                 "shasum": null
             },
             "require": {
                 "php": ">=7.2.0",
                 "sinergi/browser-detector": "~6.1.0",
-                "yiisoft/yii2": "~2.0.14"
+                "yiisoft/yii2": "~2.0.14",
+                "yiisoft/yii2-mongodb": "~2.1.0"
             },
             "type": "eff",
             "autoload": {
@@ -347,7 +348,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-asset-bootstrap-bundle",
-                "reference": "e9bd558392d13191ad7f6e688eda35d9cea7c10b",
+                "reference": "c946aa5d0bff5847f12fbb02588b5adf1111fe90",
                 "shasum": null
             },
             "require": {
@@ -381,7 +382,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-asset-chart-js",
-                "reference": "719eca10145c9d39340daf2b8f42775d1bb1ae9f",
+                "reference": "142b57c0f45e6fe63e78ebae17d180b8ba3142f2",
                 "shasum": null
             },
             "require": {
@@ -415,7 +416,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-asset-datatables",
-                "reference": "878939f9b6f45375ee2204931c3fad56342eeaf1",
+                "reference": "d6a5e0f2397b0044536a15aaf20ed94f7258477c",
                 "shasum": null
             },
             "require": {
@@ -449,7 +450,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-asset-fontawesome",
-                "reference": "c39b73a6b7851e7a6165cad2586b3bab46845b01",
+                "reference": "857c0830fe4f24804299c037b6ae5d552e59559d",
                 "shasum": null
             },
             "require": {
@@ -483,7 +484,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-asset-jquery",
-                "reference": "3e50dfb16bd27b4d49c35e71c61f572814e13699",
+                "reference": "058bfc0df924ff47bc4f960e02adfddf9b70b8be",
                 "shasum": null
             },
             "require": {
@@ -517,7 +518,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-asset-jquery-easing",
-                "reference": "05a926b4c65f8808fb9cee7b30b97da4f4af0dd6",
+                "reference": "297a9f0a7a3702847754bdced6d55d92bd803f80",
                 "shasum": null
             },
             "require": {
@@ -552,7 +553,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-asset-magnific-popup",
-                "reference": "7f430b5c30f61b93b13afea43ca59cc2d61b650e",
+                "reference": "305b41ec29f3797ae55c3a0d908b6bbcec1f5acf",
                 "shasum": null
             },
             "require": {
@@ -586,7 +587,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-asset-tinymce",
-                "reference": "51118d884aacd9ba5b9f024565e798a99ba34442",
+                "reference": "0ad3330fda56f2322414ef1376ab13bf578abecb",
                 "shasum": null
             },
             "require": {
@@ -620,7 +621,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-module-admin",
-                "reference": "77bad99293163823c8c1d320e723e1b74746f443",
+                "reference": "afba5b37fffb433d834998d6eb2a20f8959a92f5",
                 "shasum": null
             },
             "require": {
@@ -665,20 +666,12 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-module-content",
-                "reference": "279cd2252afb3b91fa2a8e4944dbd1b624f1c422",
+                "reference": "df7dbcbeb91a25a3b70974d9acdf0d78f576a6a4",
                 "shasum": null
             },
             "require": {
                 "effsoft/eff": "dev-master",
-                "effsoft/eff-asset-bootstrap-bundle": "dev-master",
-                "effsoft/eff-asset-chart-js": "dev-master",
-                "effsoft/eff-asset-fontawesome": "dev-master",
-                "effsoft/eff-asset-jquery": "dev-master",
-                "effsoft/eff-asset-jquery-easing": "dev-master",
-                "effsoft/eff-asset-magnific-popup": "dev-master",
-                "effsoft/eff-asset-tinymce": "dev-master",
                 "hashids/hashids": "~3.0.0",
-                "ircmaxell/random-lib": "~1.2.0",
                 "php": ">=7.2.0",
                 "yiisoft/yii2": "~2.0.14"
             },
@@ -708,7 +701,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-module-passport",
-                "reference": "7b0845a69f0a74ba855b5ee53356db0a2786bc83",
+                "reference": "a1105e46162a40c2a55e4e926c908fb2eb06049d",
                 "shasum": null
             },
             "require": {
@@ -750,7 +743,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-module-role",
-                "reference": "7dd12e06c1b3b708be78e356f8910b427261db0e",
+                "reference": "a0db3006d7cfdfea2bc25139e2957604abacc176",
                 "shasum": null
             },
             "require": {
@@ -793,7 +786,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-module-site",
-                "reference": "cfc5a6a32d07c60ccd1d375c5a659784c3533d65",
+                "reference": "7d2c1a6c4a68d2af60c0f8e6109fd86b4b5e5772",
                 "shasum": null
             },
             "require": {
@@ -831,7 +824,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-module-user",
-                "reference": "a6c5b598c5c09b26dd623100e97bd163e6752da3",
+                "reference": "06dee9ca5b4159f279eb0576639a81f16f0b325e",
                 "shasum": null
             },
             "require": {
@@ -874,7 +867,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-module-verify",
-                "reference": "e56610cdb5b51af174c20cb5b769b275924b9a26",
+                "reference": "0ad2d60b979311470e25fb2ac56c2c74eb85f320",
                 "shasum": null
             },
             "require": {
@@ -910,7 +903,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-theme-creative",
-                "reference": "b12b441f134e4261a2dba24b19b920528fedb2ea",
+                "reference": "1fdd78c8afd2540debfc253297feb915bfc9b339",
                 "shasum": null
             },
             "require": {
@@ -945,7 +938,7 @@
             "dist": {
                 "type": "path",
                 "url": "../eff-theme-sb-admin-2",
-                "reference": "cceba447fc3edb285f884b1da2bfcc7aec9f0128",
+                "reference": "70b5dcac843f8914e89e13ad227ea46ed4f33452",
                 "shasum": null
             },
             "require": {
