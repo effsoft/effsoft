@@ -1,15 +1,7 @@
 <?php
 
-use yii\widgets\LinkPager;
-use effsoft\eff\module\passport\services\UserService;
-use yii\widgets\Breadcrumbs;
-use effsoft\eff\asset\tinymce\TinymceAssetBundle;
-use effsoft\eff\module\content\modules\admin\models\CategoryModel;
-
-TinymceAssetBundle::register($this);
-
-$this->context->layout = '@app/themes/effsoft/admin/layouts/admin.layout.php';
-$this->title = \Yii::t('app', 'User Management');
+$this->context->layout = '@app/views/admin/layouts/admin.layout.php';
+$this->title = \Yii::t('app', 'Category Management');
 ?>
 
 <div class="card shadow mb-4">
@@ -26,15 +18,15 @@ $this->title = \Yii::t('app', 'User Management');
             use yii\widgets\ActiveForm;
 
             $form = ActiveForm::begin([
-                'id' => 'category_create_form',
-                'action' => \yii\helpers\Url::to(['/content/admin/category/create']),
+                'id' => 'category_form',
+                'action' => '',
                 'options' => [
                     'autocomplete' => 'off',
                 ],
             ])
             ?>
             <div class="form-group">
-                <?= $form->field($category_create_form, 'name', [
+                <?= $form->field($category_form, 'name', [
                     'inputOptions' => [
                         'class' => 'form-control'
                     ],
@@ -44,17 +36,30 @@ $this->title = \Yii::t('app', 'User Management');
                 ?>
             </div>
             <div class="form-group">
-                <?php $category_model = new CategoryModel(); ?>
-                <?= $form->field($category_create_form, 'parent_id', [])
+                <?php $category_model = new \effsoft\eff\module\content\models\CategoryModel(); ?>
+                <?= $form->field($category_form, 'parent_id', [])
                     ->dropDownList(
                         $category_model->getDropdownCategories(),
                         [
                             'prompt' => '上级分类',
                         ],
                         [
-                            'options' => ['0' => ['Selected' => true]],
+                            'options' => [$category_form->parent_id => ['Selected' => true]],
                         ]
                     )->label(false)->hint(false);
+                ?>
+            </div>
+            <div class="form-group">
+                <?= $form->field($category_form, 'description', [
+                    'inputOptions' => [
+                        'class' => 'form-control',
+                        'rows' => 5,
+                        'placeHolder' => '简介',
+                    ],
+                ])
+                    ->textarea()
+                    ->label(false)
+                    ->hint(false);
                 ?>
             </div>
             <div class="form-group">
@@ -62,9 +67,9 @@ $this->title = \Yii::t('app', 'User Management');
                     Submit
                 </button>
             </div>
-            <?php if (!empty($category_create_form->errors)): ?>
+            <?php if (!empty($category_form->errors)): ?>
                 <ul class="form_errors mt-2">
-                    <?php foreach ($category_create_form->errors as $error): ?>
+                    <?php foreach ($category_form->errors as $error): ?>
                         <?php if (!empty($error)): ?>
                             <?php foreach ($error as $val): ?>
                                 <li><?= $val ?></li>
@@ -76,4 +81,4 @@ $this->title = \Yii::t('app', 'User Management');
             <?php ActiveForm::end() ?>
         </div>
     </div>
-</div> 
+</div>

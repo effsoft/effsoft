@@ -1,0 +1,9 @@
+html,body{
+    height:100%;
+}
+.help-block,.form_errors li{
+    color:#e74a3b;
+}
+.sidebar .nav-item .nav-link{
+    padding:.5rem 1rem;
+}
