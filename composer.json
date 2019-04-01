@@ -30,19 +30,7 @@
     "effsoft/eff-module-admin": "dev-master",
     "effsoft/eff-module-user": "dev-master",
     "effsoft/eff-module-role": "dev-master",
-    "effsoft/eff-module-content": "dev-master",
-
-    "effsoft/eff-theme-creative": "dev-master",
-    "effsoft/eff-theme-sb-admin-2": "dev-master",
-
-    "effsoft/eff-asset-jquery": "dev-master",
-    "effsoft/eff-asset-chart-js": "dev-master",
-    "effsoft/eff-asset-bootstrap-bundle": "dev-master",
-    "effsoft/eff-asset-jquery-easing": "dev-master",
-    "effsoft/eff-asset-magnific-popup": "dev-master",
-    "effsoft/eff-asset-fontawesome": "dev-master",
-    "effsoft/eff-asset-tinymce": "dev-master",
-    "effsoft/eff-asset-datatables": "dev-master"
+    "effsoft/eff-module-content": "dev-master"
   },
   "require-dev": {
     "yiisoft/yii2-debug": "~2.1.0"
