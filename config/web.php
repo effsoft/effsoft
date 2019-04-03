@@ -126,6 +126,12 @@ $config = [
         ],
 
         'assetManager' => [
+            'bundles' => [
+                'yii\web\JqueryAsset' => [
+                    'jsOptions' => [ 'position' => \yii\web\View::POS_HEAD ],
+                    'js' => ['jquery.min.js'],
+                ],
+            ],
             'appendTimestamp' => true,
 //            'linkAssets' => true,
         ],

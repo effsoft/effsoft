@@ -1,5 +1,4 @@
 <div>
-    <label>内容</label>
     <textarea id="<?= $name ?>" name="<?= $name ?>"
               class="editor p-2 bg-white text-muted border position-relative" style="">
     </textarea>
@@ -76,7 +75,8 @@
         });
     }
 
-    $(function () {
+    (function($){
         init_tinymce();
-    });
+    })(jQuery);
+
 </script>
