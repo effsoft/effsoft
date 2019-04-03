@@ -18,10 +18,14 @@
     <link href="/themes/effsoft/css/custom.css?=<?=time()?>" rel="stylesheet">
 
     <script src="/themes/effsoft/jquery/jquery.min.js"></script>
+    <script src="/themes/effsoft/jquery-ui/jquery-ui.min.js"></script>
     <script src="/themes/effsoft/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/themes/effsoft/md5/md5.min.js"></script>
     <script src="/themes/effsoft/jquery.easing/jquery.easing.min.js"></script>
     <script src="/themes/effsoft/jquery.magnific-popup/jquery.magnific-popup.js"></script>
     <script src="/themes/effsoft/chart.js/Chart.min.js"></script>
+    <script src="/themes/effsoft/tinymce/tinymce.min.js"></script>
+    <script src="/themes/effsoft/jquery.fileupload/jquery.fileupload.js"></script>
 
     <?php $this->head() ?>
     <title><?= \yii\helpers\Html::encode($this->title); ?></title>

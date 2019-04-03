@@ -19,6 +19,9 @@ $config = [
     'defaultRoute' => 'site/home/index',
 
     'modules' => [
+        'media' => [
+            'class' => 'effsoft\eff\module\media\Module',
+        ],
         'content' => [
             'class' => 'effsoft\eff\module\content\Module',
         ],

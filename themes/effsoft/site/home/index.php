@@ -1,15 +1,14 @@
 <?php
 $this->context->layout = '@app/views/layouts/creative.layout.php';
-$creativeBundle = \effsoft\eff\theme\creative\BootstrapCreativeAssetBundle::register($this);
 ?>
 <?php
-$this->title = Yii::t('eff-module-site/app','logo_text');
+$this->title = \Yii::t('site/app','logo_text');
 ?>
 <div id="page-top"></div>
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"><?=Yii::t('eff-module-site/app','logo_text');?></a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><?=Yii::t('site/app','logo_text');?></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -35,11 +34,6 @@ $this->title = Yii::t('eff-module-site/app','logo_text');
                         <a class="nav-link" href="<?=\yii\helpers\Url::to(['/passport/register']);?>">Sign Up</a>
                     </li>
                 <?php else: ?>
-                <li class="nav-item">
-                        <a class="nav-link" href="<?=\yii\helpers\Url::to(['/user/home']);?>">
-                            <?=\Yii::$app->user->identity->username;?>
-                        </a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?=\yii\helpers\Url::to(['/admin/dashboard']);?>">Dashboard</a>
                     </li>
@@ -125,8 +119,8 @@ $this->title = Yii::t('eff-module-site/app','logo_text');
     <div class="container-fluid p-0">
         <div class="row no-gutters">
             <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="<?=$creativeBundle->baseUrl;?>/img/portfolio/fullsize/1.jpg">
-                    <img class="img-fluid" src="<?=$creativeBundle->baseUrl;?>/img/portfolio/thumbnails/1.jpg" alt="">
+                <a class="portfolio-box" href="/themes/effsoft/bootstrap-creative/img/portfolio/fullsize/1.jpg">
+                    <img class="img-fluid" src="/themes/effsoft/bootstrap-creative/img/portfolio/thumbnails/1.jpg" alt="">
                     <div class="portfolio-box-caption">
                         <div class="project-category text-white-50">
                             Category
@@ -138,8 +132,8 @@ $this->title = Yii::t('eff-module-site/app','logo_text');
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="<?=$creativeBundle->baseUrl;?>/img/portfolio/fullsize/2.jpg">
-                    <img class="img-fluid" src="<?=$creativeBundle->baseUrl;?>/img/portfolio/thumbnails/2.jpg" alt="">
+                <a class="portfolio-box" href="/themes/effsoft/bootstrap-creative/img/portfolio/fullsize/2.jpg">
+                    <img class="img-fluid" src="/themes/effsoft/bootstrap-creative/img/portfolio/thumbnails/2.jpg" alt="">
                     <div class="portfolio-box-caption">
                         <div class="project-category text-white-50">
                             Category
@@ -151,8 +145,8 @@ $this->title = Yii::t('eff-module-site/app','logo_text');
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="<?=$creativeBundle->baseUrl;?>/img/portfolio/fullsize/3.jpg">
-                    <img class="img-fluid" src="<?=$creativeBundle->baseUrl;?>/img/portfolio/thumbnails/3.jpg" alt="">
+                <a class="portfolio-box" href="/themes/effsoft/bootstrap-creative/img/portfolio/fullsize/3.jpg">
+                    <img class="img-fluid" src="/themes/effsoft/bootstrap-creative/img/portfolio/thumbnails/3.jpg" alt="">
                     <div class="portfolio-box-caption">
                         <div class="project-category text-white-50">
                             Category
@@ -164,8 +158,8 @@ $this->title = Yii::t('eff-module-site/app','logo_text');
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="<?=$creativeBundle->baseUrl;?>/img/portfolio/fullsize/4.jpg">
-                    <img class="img-fluid" src="<?=$creativeBundle->baseUrl;?>/img/portfolio/thumbnails/4.jpg" alt="">
+                <a class="portfolio-box" href="/themes/effsoft/bootstrap-creative/img/portfolio/fullsize/4.jpg">
+                    <img class="img-fluid" src="/themes/effsoft/bootstrap-creative/img/portfolio/thumbnails/4.jpg" alt="">
                     <div class="portfolio-box-caption">
                         <div class="project-category text-white-50">
                             Category
@@ -177,8 +171,8 @@ $this->title = Yii::t('eff-module-site/app','logo_text');
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="<?=$creativeBundle->baseUrl;?>/img/portfolio/fullsize/5.jpg">
-                    <img class="img-fluid" src="<?=$creativeBundle->baseUrl;?>/img/portfolio/thumbnails/5.jpg" alt="">
+                <a class="portfolio-box" href="/themes/effsoft/bootstrap-creative/img/portfolio/fullsize/5.jpg">
+                    <img class="img-fluid" src="/themes/effsoft/bootstrap-creative/img/portfolio/thumbnails/5.jpg" alt="">
                     <div class="portfolio-box-caption">
                         <div class="project-category text-white-50">
                             Category
@@ -190,8 +184,8 @@ $this->title = Yii::t('eff-module-site/app','logo_text');
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="<?=$creativeBundle->baseUrl;?>/img/portfolio/fullsize/6.jpg">
-                    <img class="img-fluid" src="<?=$creativeBundle->baseUrl;?>/img/portfolio/thumbnails/6.jpg" alt="">
+                <a class="portfolio-box" href="/themes/effsoft/bootstrap-creative/img/portfolio/fullsize/6.jpg">
+                    <img class="img-fluid" src="/themes/effsoft/bootstrap-creative/img/portfolio/thumbnails/6.jpg" alt="">
                     <div class="portfolio-box-caption p-3">
                         <div class="project-category text-white-50">
                             Category

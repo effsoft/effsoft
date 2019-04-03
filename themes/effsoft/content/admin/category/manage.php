@@ -173,7 +173,7 @@ $this->title = \Yii::t('app', 'Category Management');
         $.ajax({
             url: "<?=\yii\helpers\Url::to(['/content/admin/category/delete'])?>",
             type: "POST",
-            data: {category_id:ele.attr('data-id'),'_csrf': $('meta[name="csrf-token"]').attr("content")},
+            data: {category_id:ele.attr('data-id')},
             dataType: "json",
             beforeSend: function (xhr) {
 

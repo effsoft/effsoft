@@ -1,6 +1,6 @@
 <?php
 
-$this->context->layout = '@app/views/admin/layouts/admin.layout.php';
+$this->context->layout = '@app/views/layouts/admin.layout.php';
 $this->title = \Yii::t('app', 'Category Management');
 ?>
 

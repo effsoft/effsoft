@@ -1,8 +1,8 @@
 <?php
-$this->context->layout = '@app/themes/effsoft/admin/layouts/admin.layout.php';
+$this->context->layout = '@app/views/layouts/admin.layout.php';
 ?>
 <?php
-$this->title = Yii::t('eff-module-admin/app','Dashboard');
+$this->title = Yii::t('admin/app','Dashboard');
 ?>
 
 <!-- Page Heading -->

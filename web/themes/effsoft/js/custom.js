@@ -8,33 +8,34 @@
 
 var swapping = false;
 
-(function($) {
+(function ($) {
     $.fn.extend({
-        swap: function(options) {
+        swap: function (options) {
 
             var defaults = {
                 target: "",
                 speed: 1000,
                 opacity: "1",
-                callback: function() {}
+                callback: function () {
+                }
             };
             var options = $.extend(defaults, options);
 
-            return this.each(function() {
+            return this.each(function () {
 
                 var obj = $(this);
 
-                if (options.target!="" && !swapping) {
+                if (options.target != "" && !swapping) {
 
                     swapping = true;
 
                     // set primary and secondary elements to relative if not already specified a positon CSS attribute
                     var current_primary_pos = obj.css("position");
                     var current_secondary_pos = options.target.css("position");
-                    if (current_primary_pos!="relative" && current_primary_pos!="absolute") {
+                    if (current_primary_pos != "relative" && current_primary_pos != "absolute") {
                         obj.css("position", "relative");
                     }
-                    if (current_secondary_pos!="relative" && current_secondary_pos!="absolute") {
+                    if (current_secondary_pos != "relative" && current_secondary_pos != "absolute") {
                         options.target.css("position", "relative");
                     }
                     //
@@ -46,13 +47,17 @@ var swapping = false;
                     var current_secondary_top = current_secondary_position.top;
                     var direction_primary_y = '-';
                     var direction_secondary_y = '-';
-                    if (current_primary_top<=current_secondary_top) { // if primary above secondary
+                    if (current_primary_top <= current_secondary_top) { // if primary above secondary
                         var direction_primary_y = '+';
-                        var total_y = current_secondary_top-current_primary_top;
-                    }else{ // if primary below secondary
-                        var total_y = current_primary_top-current_secondary_top;
+                        var total_y = current_secondary_top - current_primary_top;
+                    } else { // if primary below secondary
+                        var total_y = current_primary_top - current_secondary_top;
                     }
-                    if (direction_primary_y=='-') { direction_secondary_y='+'; }else{ direction_secondary_y='-'; }
+                    if (direction_primary_y == '-') {
+                        direction_secondary_y = '+';
+                    } else {
+                        direction_secondary_y = '-';
+                    }
                     //
 
                     // calculate x-axis movement
@@ -62,23 +67,27 @@ var swapping = false;
                     var current_secondary_left = current_secondary_position.left;
                     var direction_primary_x = '-';
                     var direction_secondary_x = '-';
-                    if (current_primary_left<=current_secondary_left) { // if primary left of secondary
+                    if (current_primary_left <= current_secondary_left) { // if primary left of secondary
                         var direction_primary_x = '+';
-                        var total_x = current_secondary_left-current_primary_left;
-                    }else{ // if primary below secondary
-                        var total_x = current_primary_left-current_secondary_left;
+                        var total_x = current_secondary_left - current_primary_left;
+                    } else { // if primary below secondary
+                        var total_x = current_primary_left - current_secondary_left;
                     }
-                    if (direction_primary_x=='-') { direction_secondary_x='+'; }else{ direction_secondary_x='-'; }
+                    if (direction_primary_x == '-') {
+                        direction_secondary_x = '+';
+                    } else {
+                        direction_secondary_x = '-';
+                    }
                     //
 
                     // do swapping
                     obj.animate({
                         opacity: options.opacity
-                    }, 100, function() {
+                    }, 100, function () {
                         obj.animate({
-                            top: direction_primary_y+"="+(total_y)+"px",
-                            left: direction_primary_x+"="+(total_x)+"px"
-                        }, options.speed, function() {
+                            top: direction_primary_y + "=" + (total_y) + "px",
+                            left: direction_primary_x + "=" + (total_x) + "px"
+                        }, options.speed, function () {
                             obj.animate({
                                 opacity: "1"
                             }, 100);
@@ -86,14 +95,14 @@ var swapping = false;
                     });
                     options.target.animate({
                         opacity: options.opacity
-                    }, 100, function() {
+                    }, 100, function () {
                         options.target.animate({
-                            top: direction_secondary_y+"="+(total_y)+"px",
-                            left: direction_secondary_x+"="+(total_x)+"px"
-                        }, options.speed, function() {
+                            top: direction_secondary_y + "=" + (total_y) + "px",
+                            left: direction_secondary_x + "=" + (total_x) + "px"
+                        }, options.speed, function () {
                             options.target.animate({
                                 opacity: "1"
-                            }, 100, function() {
+                            }, 100, function () {
                                 swapping = false; // call the callback and apply the scope:
                                 options.callback.call(this);
                             });
@@ -122,7 +131,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
         sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
         dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
         s = '',
-        toFixedFix = function(n, prec) {
+        toFixedFix = function (n, prec) {
             var k = Math.pow(10, prec);
             return '' + Math.round(n * k) / k;
         };
@@ -140,7 +149,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 
 // Area Chart Example
 var ctx = document.getElementById("myAreaChart");
-if(ctx){
+if (ctx) {
     var myLineChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -189,7 +198,7 @@ if(ctx){
                         maxTicksLimit: 5,
                         padding: 10,
                         // Include a dollar sign in the ticks
-                        callback: function(value, index, values) {
+                        callback: function (value, index, values) {
                             return '$' + number_format(value);
                         }
                     },
@@ -220,7 +229,7 @@ if(ctx){
                 mode: 'index',
                 caretPadding: 10,
                 callbacks: {
-                    label: function(tooltipItem, chart) {
+                    label: function (tooltipItem, chart) {
                         var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
                         return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
                     }
@@ -232,7 +241,7 @@ if(ctx){
 
 // Pie Chart Example
 var ctx = document.getElementById("myPieChart");
-if(ctx){
+if (ctx) {
     var myPieChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
@@ -273,7 +282,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
         sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
         dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
         s = '',
-        toFixedFix = function(n, prec) {
+        toFixedFix = function (n, prec) {
             var k = Math.pow(10, prec);
             return '' + Math.round(n * k) / k;
         };
@@ -291,7 +300,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 
 // Bar Chart Example
 var ctx = document.getElementById("myBarChart");
-if(ctx){
+if (ctx) {
     var myBarChart = new Chart(ctx, {
         type: 'bar',
         data: {
@@ -335,7 +344,7 @@ if(ctx){
                         maxTicksLimit: 5,
                         padding: 10,
                         // Include a dollar sign in the ticks
-                        callback: function(value, index, values) {
+                        callback: function (value, index, values) {
                             return '$' + number_format(value);
                         }
                     },
@@ -364,7 +373,7 @@ if(ctx){
                 displayColors: false,
                 caretPadding: 10,
                 callbacks: {
-                    label: function(tooltipItem, chart) {
+                    label: function (tooltipItem, chart) {
                         var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
                         return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
                     }
@@ -374,4 +383,54 @@ if(ctx){
     });
 }
 
+var get_tinymce_element_identity = function(uuid, name){
+  return md5(uuid + name);
+};
 
+var get_tinymce_loading = function (uuid) {
+    return '<div id="' + uuid + '"><span style="display:inline-block;width:10rem;">' +
+        '<div class="progress fixed-top">' +
+        '<div class="progress-bar bg-info" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>' +
+        '</div>' +
+        '<i class="fa fa-circle-notch fa-spin fa-fw"></i>&nbsp;<span class="percent">0%</span>' +
+        '</span></div>';
+};
+
+function uuidv4_v2() {
+    return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
+        (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+    )
+}
+
+function uuidv4_v1() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
+}
+
+$.ajaxSetup({
+    headers: {
+        '_csrf': $('meta[name="csrf-token"]').attr("content"),
+    },
+    data:{
+        '_csrf':$('meta[name="csrf-token"]').attr("content"),
+    }
+});
+
+var get_uuid = function () {
+    // Math.random should be unique because of its seeding algorithm.
+    // Convert it to base 36 (numbers + letters), and grab the first 9 characters
+    // after the decimal.
+    if (uuidv4_v2()) {
+        return uuidv4_v2().toUpperCase();
+    }
+    if (uuidv4_v1()) {
+        return uuidv4_v1().toUpperCase();
+    }
+    return '_' + Math.random().toString(36).substr(2, 9).toUpperCase();
+};
+
+$.postJSON = function (url, data, func) {
+    $.post(url, data, func, 'json');
+}

@@ -35,10 +35,10 @@ use yii\helpers\Url;
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="<?= Url::to(['/site/admin/config/manage'], true); ?>"
+        <a class="nav-link collapsed" href="<?= Url::to(['/site/admin/configuration/manage'], true); ?>"
            aria-expanded="true" aria-controls="collapseSitePage">
             <i class="fas fa-fw fa-cogs"></i>
-            <span><?= Yii::t('app', 'Config'); ?></span>
+            <span><?= Yii::t('app', 'Configuration'); ?></span>
         </a>
     </li>
     
@@ -113,7 +113,7 @@ use yii\helpers\Url;
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header"><?= Yii::t('app', 'Shortcut:'); ?></h6>
                 <a class="collapse-item"
-                   href="<?= Url::to(['/content/admin/document/list'], true); ?>"><?= Yii::t('app', 'All'); ?></a>
+                   href="<?= Url::to(['/content/admin/document/manage'], true); ?>"><?= Yii::t('app', 'All'); ?></a>
                 <a class="collapse-item"
                    href="<?= Url::to(['/content/admin/document/create'], true); ?>"><?= Yii::t('app', 'Create'); ?></a>
             </div>

@@ -30,7 +30,8 @@
     "effsoft/eff-module-admin": "dev-master",
     "effsoft/eff-module-user": "dev-master",
     "effsoft/eff-module-role": "dev-master",
-    "effsoft/eff-module-content": "dev-master"
+    "effsoft/eff-module-content": "dev-master",
+    "effsoft/eff-module-media": "dev-master"
   },
   "require-dev": {
     "yiisoft/yii2-debug": "~2.1.0"
@@ -42,51 +43,15 @@
     }
   },
   "repositories": {
-    "eff-asset-datatables":{
-      "type": "path",
-      "url": "../eff-asset-datatables"
-    },
-    "eff-asset-tinymce":{
-      "type": "path",
-      "url": "../eff-asset-tinymce"
-    },
-    "eff-asset-fontawesome":{
-      "type": "path",
-      "url": "../eff-asset-fontawesome"
-    },
-    "eff-asset-jquery":{
-      "type": "path",
-      "url": "../eff-asset-jquery"
-    },
-    "eff-asset-magnific-popup":{
-      "type": "path",
-      "url": "../eff-asset-magnific-popup"
-    },
-    "eff-asset-jquery-easing":{
-      "type": "path",
-      "url": "../eff-asset-jquery-easing"
-    },
-    "eff-asset-bootstrap-bundle":{
-      "type": "path",
-      "url": "../eff-asset-bootstrap-bundle"
-    },
-    "eff-asset-chart-js":{
-      "type": "path",
-      "url": "../eff-asset-chart-js"
-    },
+
     "eff":{
       "type": "path",
       "url": "../eff"
     },
-    "eff-theme-creative":{
+    "eff-module-media":{
       "type": "path",
-      "url": "../eff-theme-creative"
+      "url": "../eff-module-media"
     },
-    "eff-theme-sb-admin-2":{
-      "type": "path",
-      "url": "../eff-theme-sb-admin-2"
-    },
-
     "eff-module-content":{
       "type": "path",
       "url": "../eff-module-content"
