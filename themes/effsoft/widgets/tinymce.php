@@ -23,10 +23,12 @@
             menubar: false,
             plugins: [
                 "autolink link table",
-                "paste textcolor",
-                "i_image i_audio i_video"
+                "paste textcolor image",
+                "i_image i_audio i_video",
+                "contextmenu"
+
             ],
-            toolbar: "table bold italic forecolor backcolor alignleft aligncenter alignright link i_image i_audio i_video",
+            toolbar: "table bold italic forecolor backcolor alignleft aligncenter alignright link image i_image i_audio i_video",
             codesample_languages: [
                 {text: 'HTML/XML', value: 'markup'},
                 {text: 'JavaScript', value: 'javascript'},
@@ -61,8 +63,10 @@
 
             content_css: [
                 '/themes/effsoft/fontawesome/css/all.min.css',
+                '/themes/effsoft/bootstrap-sb-admin-2/css/sb-admin-2.min.css',
                 '/themes/effsoft/css/custom.css?=<?=time()?>',
             ],
+            content_style: "body {padding: .5rem}",
             setup: function (editor) {
                 editor.on('change', function () {
                     editor.save();

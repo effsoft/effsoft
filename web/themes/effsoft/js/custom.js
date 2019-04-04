@@ -387,8 +387,8 @@ var get_tinymce_element_identity = function(uuid, name){
   return md5(uuid + name);
 };
 
-var get_tinymce_loading = function (uuid) {
-    return '<div id="' + uuid + '"><span style="display:inline-block;width:10rem;">' +
+var get_tinymce_loading = function (identity) {
+    return '<div id="' + identity + '"><span style="display:inline-block;width:10rem;">' +
         '<div class="progress fixed-top">' +
         '<div class="progress-bar bg-info" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>' +
         '</div>' +

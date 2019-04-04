@@ -16,6 +16,10 @@ tinymce.PluginManager.add('i_image', function(editor, url) {
             'value': uuid,
         })).append($('<input>').attr({
             'type': 'hidden',
+            'name': 'media_type',
+            'value': 1,//MediaType::DOCUMENT_CONTENT_IMAGE
+        })).append($('<input>').attr({
+            'type': 'hidden',
             'name': '_csrf',
             'value': $('meta[name="csrf-token"]').attr("content"),
         })).append($('<input>').attr({
@@ -64,12 +68,14 @@ tinymce.PluginManager.add('i_image', function(editor, url) {
                 var response = data.result;
                 var file = data.result.file[0];console.log(file);
                 if(file.error != undefined){
-                    $body.find('#' + get_tinymce_element_identity(uuid,data.files[0].name)).replaceWith($('<div style="color:#ff5e3a;">'+file.error+'</div>').fadeOut(5000,function(){
-                        $(this).remove();
-                    }));
+                    $body.find('#' + get_tinymce_element_identity(uuid,data.files[0].name))
+                        .replaceWith($('<div style="color:#ff5e3a;">'+file.error+'</div>').fadeOut(5000,function(){
+                            $(this).remove();
+                        }));
                     return;
                 }
-                $body.find('#' + get_tinymce_element_identity(uuid,data.files[0].name)).replaceWith($('<div id="'+get_tinymce_element_identity(uuid,data.files[0].name)+'"><img src="'+file.middleUrl+'" /></div>'));
+                $body.find('#' + get_tinymce_element_identity(uuid,data.files[0].name))
+                    .replaceWith($('<div id="'+get_tinymce_element_identity(uuid,data.files[0].name)+'"><img src="'+file.largeUrl+'" /></div>'));
                 editor.focus();
                 editor.selection.select(editor.getBody(), true);
                 editor.selection.collapse(false);
@@ -78,7 +84,10 @@ tinymce.PluginManager.add('i_image', function(editor, url) {
             fail: function(e,data){
                 console.log('fail');
                 var $body = $(editor.getBody());
-                $body.find('#' + get_tinymce_element_identity(uuid,data.files[0].name)).find('span[class="percent"]').addClass('text-danger').text('Error, please try again!');
+                $body.find('#' + get_tinymce_element_identity(uuid,data.files[0].name))
+                    .find('span[class="percent"]')
+                    .addClass('text-danger')
+                    .text('Error, please try again!');
                 $body.find('#' + get_tinymce_element_identity(uuid,data.files[0].name)).fadeOut(1000);
             },
 
@@ -86,7 +95,10 @@ tinymce.PluginManager.add('i_image', function(editor, url) {
                 console.log('progress');
                 var progress = parseInt(data.loaded / data.total * 100, 10);
                 var $body = $(editor.getBody());
-                $body.find('#' + get_tinymce_element_identity(uuid,data.files[0].name)).find('.progress-bar').css('width',progress + '%').attr('aria-valuenow',progress);
+                $body.find('#' + get_tinymce_element_identity(uuid,data.files[0].name))
+                    .find('.progress-bar')
+                    .css('width',progress + '%')
+                    .attr('aria-valuenow',progress);
                 if(progress == 100){
                     $body.find('#' + get_tinymce_element_identity(uuid,data.files[0].name)).find('span[class="percent"]').html('Processing...');
                 }else{
@@ -94,27 +106,13 @@ tinymce.PluginManager.add('i_image', function(editor, url) {
                 }
                 console.log(progress);
             },
-        }).on('fileuploadchunkbeforesend', function (e, data) {
-            console.log('fileuploadchunkbeforesend');
-        })
-            .on('fileuploadchunksend', function (e, data) {
-                console.log('fileuploadchunksend');
-            })
-            .on('fileuploadchunkdone', function (e, data) {
-                console.log('fileuploadchunkdone');
-            })
-            .on('fileuploadchunkfail', function (e, data) {
-                console.log('fileuploadchunkfail');
-            })
-            .on('fileuploadchunkalways', function (e, data) {
-                console.log('fileuploadchunkalways');
-            });
+        });
         form.find('input[type="file"]').click();
     }
 
     editor.addButton('i_image', {
         title: 'Upload Image',
-        icon: 'fa fas fa-file-image',
+        icon: 'fa fa fa-file-image',
         onclick: selectFile
     });
 
