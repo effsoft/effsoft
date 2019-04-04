@@ -39,12 +39,10 @@ $this->title = \Yii::t('app', 'Category Management');
                 <?php $category_model = new \effsoft\eff\module\content\models\CategoryModel(); ?>
                 <?= $form->field($category_form, 'parent_id', [])
                     ->dropDownList(
-                        $category_model->getDropdownCategories(),
+                        $category_model->getParentDropdownCategories(),
                         [
                             'prompt' => '上级分类',
-                        ],
-                        [
-                            'options' => [$category_form->parent_id => ['Selected' => true]],
+                            'options' => [\effsoft\eff\helpers\Ids::encodeId($category_form->parent_id) => ['Selected' => true]],
                         ]
                     )->label(false)->hint(false);
                 ?>

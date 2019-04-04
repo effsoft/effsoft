@@ -185,7 +185,20 @@ $this->title = \Yii::t('app', 'Category Management');
                         container.remove();
                     });
                 }else{
-                    alert(data.status);
+                    $.notify({
+                        message: data.message
+                    },{
+                        type: 'danger',
+                        allow_dismiss: false,
+                        delay: 2800,
+                        animate: {
+                            enter: 'animated fadeInDown',
+                            exit: 'animated fadeOutUp'
+                        },
+                        onShow: function() {
+                            this.css({'width':'auto','height':'auto'});
+                        },
+                    });
                 }
             },
             complete: function () {

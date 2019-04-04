@@ -38,7 +38,7 @@ $this->title = Yii::t('app', 'Create Document');
                             'prompt' => '分类',
                         ],
                         [
-                            'options' => [$document_form->category => ['Selected' => true]],
+                            'options' => [\effsoft\eff\helpers\Ids::encodeId($document_form->category) => ['Selected' => true]],
                         ]
                     )->label(false)->hint(false);
                 ?>
@@ -375,9 +375,18 @@ $this->title = Yii::t('app', 'Create Document');
                         window.location.href = '<?=\yii\helpers\Url::to(['/content/admin/document/manage'])?>';
                     }else{
                         $.notify({
-                            message: response.message,
+                            message: response.message
                         },{
-                            type: 'danger'
+                            type: 'danger',
+                            allow_dismiss: false,
+                            delay: 2800,
+                            animate: {
+                                enter: 'animated fadeInDown',
+                                exit: 'animated fadeOutUp'
+                            },
+                            onShow: function() {
+                                this.css({'width':'auto','height':'auto'});
+                            },
                         });
                     }
                 },

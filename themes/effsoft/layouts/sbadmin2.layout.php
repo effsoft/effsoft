@@ -22,6 +22,7 @@
 
     <link href="/themes/effsoft/jquery.magnific-popup/magnific-popup.css" rel="stylesheet">
     <link href="/themes/effsoft/tokenfield/css/bootstrap-tokenfield.min.css" rel="stylesheet">
+    <link href="/themes/effsoft/lightbox2/css/lightbox.min.css" rel="stylesheet">
 
     <link href="/themes/effsoft/bootstrap-sb-admin-2/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="/themes/effsoft/css/custom.css?=<?=time()?>" rel="stylesheet">
@@ -36,6 +37,7 @@
     <script src="/themes/effsoft/jquery.fileupload/jquery.fileupload.js"></script>
     <script src="/themes/effsoft/tokenfield/bootstrap-tokenfield.min.js"></script>
     <script src="/themes/effsoft/bootstrap-notify/bootstrap-notify.min.js"></script>
+    <script src="/themes/effsoft/lightbox2/js/lightbox.min.js"></script>
 
     <script src="/themes/effsoft/bootstrap-sb-admin-2/js/sb-admin-2.min.js"></script>
     <script src="/themes/effsoft/js/custom.js?v=<?=time()?>"></script>
